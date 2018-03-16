@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<records>
+	<employee id="666">
+		<name>Harry</name>
+		<surname>Jandu</surname>
+		<salary>5000</salary>
+		<age>25</age>
+	</employee>
+	
+	<employee id="666" value="awesome">
+		<name>Demba</name>
+		<surname>Cisse</surname>
+		<salary>8000</salary>
+		<age>25</age>
+	</employee>
+	
+	<employee id="666">
+		<name>Libni</name>
+		<surname>McTavish</surname>
+		<salary>9000</salary>
+		<age>26</age>
+	</employee>
+	
+	<employee id="606">
+		<name>Sara</name>
+		<surname>Benloulou</surname>
+		<salary>10000</salary>
+		<age>21</age>
+	</employee>
+</records>
