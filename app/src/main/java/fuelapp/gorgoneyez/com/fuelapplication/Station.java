@@ -6,18 +6,25 @@ public class Station
 	private String prix;
 	private String nom;		// optionnel
 	private String ville;
-    private String service;
-    private String lat;
-    private String lng;
-	
+	private String service;
+	private String lat;
+	private String lng;
+
 	public Station(String ville, String adresse, String prix, String service, String lat, String lng)
 	{
 		this.adresse = adresse;
 		this.prix = prix;
 		this.ville = ville;
-        this.service = service;
-        this.lat = lat;
-        this.lng = lng;
+		this.service = service;
+		this.lat = lat;
+		this.lng = lng;
+	}
+
+	// constructor avec nom
+	public Station(String ville, String adresse, String prix, String nom, String service, String lat, String lng)
+	{
+		this(ville, adresse, prix, service, lat, lng);
+		this.nom = nom;
 	}
 
 	public void setVille(String ville)
@@ -34,36 +41,41 @@ public class Station
 	{
 		this.adresse = adresse;
 	}
-	
+
 	public String getAdresse()
 	{
 		return this.adresse;
 	}
-	
+
 	public void setPrix(String prix)
 	{
 		this.prix = prix;
 	}
-	
+
 	public String getPrix()
 	{
 		return this.prix;
 	}
-	
+
+	public String getNom()
+	{
+		return this.nom;
+	}
+
 	public void setNom(String nom)
 	{
 		this.nom = nom;
 	}
 
-    public String getService()
-    {
-        return this.service;
-    }
+	public String getService()
+	{
+		return this.service;
+	}
 
-    public void setService(String service)
-    {
-        this.service = service;
-    }
+	public void setService(String service)
+	{
+		this.service = service;
+	}
 
 	public String getLat()
 	{
@@ -90,6 +102,7 @@ public class Station
 	@Override
 	public String toString()
 	{
-		return this.ville + "\n" + this.adresse + "\n\n" + "SERVICES OFFERTES :" + "\n\n" + this.service;
+		//return this.ville + "\n" + this.adresse + "\n\n" + "SERVICES OFFERTES :" + "\n\n" + this.service;
+		return this.ville + "\n" + this.adresse + "\n\n" + "SERVICES DISPONIBLES :" + "\n"  + this.service + "\n\n" + "CARBURANTS DISPONIBLES :" + "\n" + this.nom;
 	}
 }

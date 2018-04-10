@@ -64,6 +64,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setMinZoomPreference(5);
+
         int padding = 100;
         LatLngBounds.Builder latLngBounds = new LatLngBounds.Builder();
 
@@ -261,8 +265,210 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44140002));
 
         LatLng A_44590002 = new LatLng(47.64843, -1.66863);
-        mMap.addMarker(new MarkerOptions().position(A_44550001).title("Lieu-dit Le Mortier" + "\n" + "Derval"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44550001));
+        mMap.addMarker(new MarkerOptions().position(A_44590002).title("Lieu-dit Le Mortier" + "\n" + "Derval"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44590002));
+
+        LatLng A_44400005 = new LatLng(47.15479, -1.53707);
+        mMap.addMarker(new MarkerOptions().position(A_44400005).title("140 Route des Sorinières" + "\n" + "Rezé"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44400005));
+
+        LatLng A_44590001 = new LatLng(47.6680921449, -1.66311548938);
+        mMap.addMarker(new MarkerOptions().position(A_44590001).title("48 Rue Châteaubriant" + "\n" + "Derval"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44590001));
+
+        LatLng A_44740002 = new LatLng(47.27800, -2.45800);
+        mMap.addMarker(new MarkerOptions().position(A_44740002).title("ROUTE DU POULIGUEN" + "\n" + "Batz-sur-Mer"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44740002));
+
+        LatLng A_44700003 = new LatLng(47.24624, -1.58938);
+        mMap.addMarker(new MarkerOptions().position(A_44700003).title("54, avenue de la Ferrière" + "\n" + "Orvault"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44700003));
+
+        LatLng A_44521001 = new LatLng(47.39123, -1.29207);
+        mMap.addMarker(new MarkerOptions().position(A_44521001).title("RN 23 - LES HAUTES LANDES" + "\n" + "COUFFÉ"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44521001));
+
+        LatLng A_44420002 = new LatLng(47.353, -2.513);
+        mMap.addMarker(new MarkerOptions().position(A_44420002).title("2 rue des Pins" + "\n" + "LA TURBALLE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44420002));
+
+        LatLng A_44220003 = new LatLng(47.21344, -1.71900);
+        mMap.addMarker(new MarkerOptions().position(A_44220003).title("6 Rue des Ardillets" + "\n" + "COUÉRON"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44220003));
+
+        LatLng A_44118003 = new LatLng(47.09, -1.611);
+        mMap.addMarker(new MarkerOptions().position(A_44118003).title("78 Grand'Rue" + "\n" + "La Chevrolière"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44118003));
+
+        LatLng A_44350001 = new LatLng(47.291, -2.398);
+        mMap.addMarker(new MarkerOptions().position(A_44350001).title("ROUTE DE LA BAULE" + "\n" + "GUERANDE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44350001));
+
+        LatLng A_44190006 = new LatLng(47.09679, -1.28172);
+        mMap.addMarker(new MarkerOptions().position(A_44190006).title("ROUTE DE NANTES" + "\n" + "Clisson"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44190006));
+
+        LatLng A_44510001 = new LatLng(47.27503, -2.44083);
+        mMap.addMarker(new MarkerOptions().position(A_44510001).title("Rue de Cornen" + "\n" + "LE POULIGUEN"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44510001));
+
+        LatLng A_44570004 = new LatLng(47.312222784, -2.20011680566);
+        mMap.addMarker(new MarkerOptions().position(A_44570004).title("RN 171" + "\n" + "TRIGNAC"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44570004));
+
+        LatLng A_44300018 = new LatLng(47.24781, -1.51216);
+        mMap.addMarker(new MarkerOptions().position(A_44300018).title("95 rue du Perray" + "\n" + "NANTES"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44300018));
+
+        LatLng A_44160003 = new LatLng(47.43200, -2.08300);
+        mMap.addMarker(new MarkerOptions().position(A_44160003).title("Route de Nantes-CS 20077" + "\n" + "Pontchâteau"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44160003));
+
+        LatLng A_44160005 = new LatLng(47.43600, -2.07700);
+        mMap.addMarker(new MarkerOptions().position(A_44160005).title("LA HIRTAIS" + "\n" + "SAINTE ANNE SUR BRIVET"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44160005));
+
+        LatLng A_44800004 = new LatLng(47.22600, -1.63500);
+        mMap.addMarker(new MarkerOptions().position(A_44800004).title("Zone Atlantis" + "\n" + "Saint-Herblain"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44800004));
+
+        LatLng A_44600006 = new LatLng(47.263, -2.239);
+        mMap.addMarker(new MarkerOptions().position(A_44600006).title("310 Rue de Pornichet" + "\n" + "SAINT-NAZAIRE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44600006));
+
+        LatLng A_44800001 = new LatLng(47.24714, -1.60587);
+        mMap.addMarker(new MarkerOptions().position(A_44800001).title("325 Route de Vannes" + "\n" + "SAINT-HERBLAIN"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44800001));
+
+        LatLng A_44110005 = new LatLng(47.71919, -1.36395);
+        mMap.addMarker(new MarkerOptions().position(A_44110005).title("Rue des 27 Otages" + "\n" + "CHÂTEAUBRIANT"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44110005));
+
+        LatLng A_44119003 = new LatLng(47.33140, -1.62326);
+        mMap.addMarker(new MarkerOptions().position(A_44119003).title("RN 137 - Aire de Treillières Ouest" + "\n" + "Treillières"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44119003));
+
+        LatLng A_44116001 = new LatLng(46.97125, -1.43372);
+        mMap.addMarker(new MarkerOptions().position(A_44116001).title("6, rue de Carteron" + "\n" + "VIEILLEVIGNE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44116001));
+
+        LatLng A_44300017 = new LatLng(47.25053, -1.51839);
+        mMap.addMarker(new MarkerOptions().position(A_44300017).title("14 route de Paris" + "\n" + "NANTES"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44300017));
+
+        LatLng A_44710002 = new LatLng(47.131, -1.753);
+        mMap.addMarker(new MarkerOptions().position(A_44710002).title("RUE DES EPINETTES" + "\n" + "PORT SAINT-PERE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44710002));
+
+        LatLng A_44830002 = new LatLng(47.14363, -1.67927);
+        mMap.addMarker(new MarkerOptions().position(A_44830002).title("Rue de Nantes" + "\n" + "BOUAYE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44830002));
+
+        LatLng A_44540001 = new LatLng(47.5297748799, -1.18620212627);
+        mMap.addMarker(new MarkerOptions().position(A_44540001).title("RTE DE CHATEAUBRIANT" + "\n" + "SAINT-MARS-LA-JAILLE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44540001));
+
+        LatLng A_44770001 = new LatLng(47.14145, -2.18897);
+        mMap.addMarker(new MarkerOptions().position(A_44770001).title("1 Rue des Filets" + "\n" + "LA PLAINE-SUR-MER"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44770001));
+
+        LatLng A_44390003 = new LatLng(47.43704, -1.51709);
+        mMap.addMarker(new MarkerOptions().position(A_44390003).title("ZI DE LA SANGLE" + "\n" + "NORT SUR ERDRE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44390003));
+
+        LatLng A_44412001 = new LatLng(47.15955, -1.54517);
+        mMap.addMarker(new MarkerOptions().position(A_44412001).title("10 Rond Point de la Corbinerie" + "\n" + "REZÉ"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44412001));
+
+        LatLng A_44802001 = new LatLng(47.222, -1.606);
+        mMap.addMarker(new MarkerOptions().position(A_44802001).title("Boulevard de la Baule" + "\n" + "SAINT-HERBLAIN"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44802001));
+
+        LatLng A_44350004 = new LatLng(47.32944, -2.41115);
+        mMap.addMarker(new MarkerOptions().position(A_44350004).title("Rue de Villejames" + "\n" + "Guérande"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44350004));
+
+        LatLng A_44000005 = new LatLng(47.23769, -1.53264);
+        mMap.addMarker(new MarkerOptions().position(A_44000005).title("55 Boulevard Jules Verne" + "\n" + "Nantes"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44000005));
+
+        LatLng A_44350006 = new LatLng(47.30616, -2.40835);
+        mMap.addMarker(new MarkerOptions().position(A_44350006).title("Route de la Baule" + "\n" + "Guérande"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44350006));
+
+        LatLng A_44380008 = new LatLng(47.2594609, -2.342279);
+        mMap.addMarker(new MarkerOptions().position(A_44380008).title("1, BOULEVARD DE LA REPUBLIQUE" + "\n" + "PORNICHET"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44380008));
+
+        LatLng A_44100005 = new LatLng(47.2241746, -1.5319617);
+        mMap.addMarker(new MarkerOptions().position(A_44100005).title("49-61 BLD DALBY" + "\n" + "NANTES"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44100005));
+
+
+        LatLng A_44580002 = new LatLng(47.0493551, -1.9634058);
+        mMap.addMarker(new MarkerOptions().position(A_44580002).title("Chemin de la Culee" + "\n" + "BOURGNEUF-EN-RETZ"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44580002));
+
+        LatLng A_44480002 = new LatLng(47.3244155, -2.0860493);
+        mMap.addMarker(new MarkerOptions().position(A_44480002).title("Rue du Stade" + "\n" + "MDONGES"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44480002));
+
+        LatLng A_44150004 = new LatLng(47.370918, -1.1814103);
+        mMap.addMarker(new MarkerOptions().position(A_44150004).title("Rue Audigane" + "\n" + "ANCENIS"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44150004));
+
+        LatLng A_44720004 = new LatLng(47.3854824, -2.2055697);
+        mMap.addMarker(new MarkerOptions().position(A_44720004).title("Place de la Commune de Paris - D50" + "\n" + "Saint-Joachim"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44720004));
+
+        LatLng A_44500002 = new LatLng(47.2791829, -2.4244468);
+        mMap.addMarker(new MarkerOptions().position(A_44500002).title("14 Avenue du Maréchal de Lattre de Tassigny" + "\n" + "La Baule-Escoublac"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44500002));
+
+        LatLng A_44600009 = new LatLng(47.2707397, -2.257991);
+        mMap.addMarker(new MarkerOptions().position(A_44600009).title("LIEU DIT RETON" + "\n" + "SAINT NAZAIRE"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44600009));
+
+        LatLng A_44230003 = new LatLng(47.1917216, -1.496474);
+        mMap.addMarker(new MarkerOptions().position(A_44230003).title("2 Rue Pierre Mendès France" + "\n" + "Saint-Sébastien-sur-Loire"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44230003));
+
+        LatLng A_44120004 = new LatLng(47.1603993, -1.514568);
+        mMap.addMarker(new MarkerOptions().position(A_44120004).title("2102 La Grassinière, 44120 Vertou" + "\n" + "VERTOU"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44120004));
+
+        LatLng A_44300004 = new LatLng(47.2583805, -1.581989);
+        mMap.addMarker(new MarkerOptions().position(A_44300004).title("162 Route de Rennes" + "\n" + "Nantes"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44300004));
+
+        LatLng A_44190001 = new LatLng(47.0849012, -1.2652629);
+        mMap.addMarker(new MarkerOptions().position(A_44190001).title("LE BARILLET" + "\n" + "GéTIGNé"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44190001));
+
+        LatLng A_44170002 = new LatLng(47.5631075, -1.6178248);
+        mMap.addMarker(new MarkerOptions().position(A_44170002).title("ROUTE D'ABBARETZ" + "\n" + "NOZAY"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44170002));
+///
+        LatLng A_44640002 = new LatLng(47.198417, -1.759914);
+        mMap.addMarker(new MarkerOptions().position(A_44640002).title("28 Rue de la Jouardais" + "\n" + "LE PELLERIN"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44640002));
+
+        LatLng A_44620002 = new LatLng(47.1765082, -1.6813656);
+        mMap.addMarker(new MarkerOptions().position(A_44620002).title("Avenue de la Libération" + "\n" + "La Montagne"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44620002));
+
+        LatLng A_44220002 = new LatLng(47.2154785, -1.687093);
+        mMap.addMarker(new MarkerOptions().position(A_44220002).title("48 Boulevard de la Libération" + "\n" + "Couëron"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44220002));
+
+        LatLng A_44340004 = new LatLng(47.15795, -1.608438);
+        mMap.addMarker(new MarkerOptions().position(A_44340004).title("ZONE NANTES ATLANTIQUE" + "\n" + "Bouguenais"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44340004));
+
+        LatLng A_44210004 = new LatLng(47.15795, -1.6084389);
+        mMap.addMarker(new MarkerOptions().position(A_44210004).title("Route Bleue" + "\n" + "Pornic"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(A_44210004));
+
 
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){

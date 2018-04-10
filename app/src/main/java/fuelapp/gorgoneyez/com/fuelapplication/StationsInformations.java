@@ -19,7 +19,6 @@ public class StationsInformations extends AppCompatActivity {
         setContentView(R.layout.activity_stations_informations);
 
 
-
         // Get the application context
         mContext = getApplicationContext();
         mActivity = StationsInformations.this;

@@ -1,52 +1,81 @@
 package fuelapp.gorgoneyez.com.fuelapplication;
 
-        import android.app.ListActivity;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.support.v4.view.MenuItemCompat;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.Menu;
-        import android.view.MenuInflater;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.ArrayAdapter;
-        import android.widget.EditText;
-        import android.widget.ListView;
-        import android.widget.SearchView;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
-public class Accueil extends ListActivity
+public class Accueil extends Activity
 {
     private ArrayList<Station> stations;
-    EditText inputSearch;
+    private StationAdapter stationAdapter;
+    private ListView listView;
+    private EditText inputSearchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_list);
 
-        this.stations = StationInfo.getStationsInfo(this).getStations();
+        this.listView = (ListView)findViewById(android.R.id.list);
 
-        StationAdapter stationAdapter = new StationAdapter(getApplicationContext(), stations);
+        initList();
 
-        setListAdapter(stationAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
+            {
+                // enleve ligne suivante pour ne rien afficher
+//				Station s = ((StationAdapter)getListAdapter()).getItem(position);
+//				Toast.makeText(this, "Clicked " + s.toString(), Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(getApplicationContext(), StationsInformations.class);
+                myIntent.putExtra("fname", listView.getItemAtPosition(position).toString());
+                startActivity(myIntent);
+            }
+        });
+
+        this.inputSearchBar = (EditText)findViewById(R.id.input_search_bar);
+        this.inputSearchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                stationAdapter.getFilter().filter(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {
+
+            }
+        });
     }
 
-
-    public void onListItemClick(ListView listview, View view, int position, long id)
+    private void initList()
     {
-        // enleve ligne suivante pour ne rien afficher
-//		Station s = ((StationAdapter)getListAdapter()).getItem(position);
-//		Toast.makeText(this, "Clicked " + s.toString(), Toast.LENGTH_SHORT).show();
-        Intent myIntent = new Intent(getApplicationContext(), StationsInformations.class);
-        myIntent.putExtra("fname", listview.getItemAtPosition(position).toString());
-        startActivity(myIntent);
+        this.stations = StationInfo.getStationsInfo(this).getStations();
+        this.stationAdapter = new StationAdapter(getApplicationContext(), stations);
+
+        this.listView.setAdapter(stationAdapter);
     }
 
     public class StationAdapter extends ArrayAdapter<Station>
@@ -80,31 +109,11 @@ public class Accueil extends ListActivity
             TextView stationVille = convertView.findViewById(R.id.station_ville);
             stationVille.setText(s.getVille());
 
+            TextView stationService = convertView.findViewById(R.id.station_service);
+            stationService.setText(s.getNom());
+
             return convertView;
         }
     }
 
-
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		MenuInflater inflater = getMenuInflater();
-//		inflater.inflate(R.menu.serach_menu, menu);
-//
-//		MenuItem searchItem  = menu.findItem(R.id.search);
-//		SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-//
-//		searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//			@Override
-//			public boolean onQueryTextSubmit(String s) {
-//				return false;
-//			}
-//
-//			@Override
-//			public boolean onQueryTextChange(String s) {
-//				return false;
-//			}
-//		});
-//
-//		return super.onCreateOptionsMenu(menu);
-//	}
 }
